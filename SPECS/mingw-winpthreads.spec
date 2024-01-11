@@ -5,8 +5,8 @@
 %global enable_tests 0
 
 Name:           mingw-winpthreads
-Version:        10.0.0
-Release:        2%{?dist}
+Version:        11.0.0
+Release:        1%{?dist}
 Summary:        MinGW pthread library
 
 # The main license of winpthreads is MIT, but parts of this library
@@ -231,21 +231,42 @@ rm -rf /tmp/wine-winpthreads
 
 
 %changelog
-* Fri May 06 2022 Richard W.M. Jones <rjones@redhat.com> - 10.0.0-2
-- Rebase to Fedora Rawhide
-  resolves: rhbz#2080166
+* Sun Apr 30 2023 Sandro Mani <manisandro@gmail.com> - 11.0.0-1
+- Update to 11.0.0
 
-* Mon Aug 23 2021 Richard W.M. Jones <rjones@redhat.com> - 9.0.0-2
+* Thu Jan 19 2023 Fedora Release Engineering <releng@fedoraproject.org> - 10.0.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_38_Mass_Rebuild
+
+* Wed May 04 2022 Sandro Mani <manisandro@gmail.com> - 10.0.0-2
+- Rebuild for standard dll provides move to mingw-crt
+- Spec cleanups
+
+* Tue Apr 26 2022 Sandro Mani <manisandro@gmail.com> - 10.0.0-1
+- Update to 10.0.0
+
+* Fri Mar 25 2022 Sandro Mani <manisandro@gmail.com> - 9.0.0-7
+- Rebuild with mingw-gcc-12
+
+* Fri Mar 25 2022 Sandro Mani <manisandro@gmail.com> - 9.0.0-6
+- Rebuild with gcc-12
+
+* Wed Feb 23 2022 Marc-André Lureau <marcandre.lureau@redhat.com> - 9.0.0-5
+- Add ucrt64 target (bootstrap=0)
+
+* Wed Feb 23 2022 Marc-André Lureau <marcandre.lureau@redhat.com> - 9.0.0-4
+- Add ucrt64 target (bootstrap=1)
+
+* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 9.0.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 9.0.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
+* Fri Jul 09 2021 Sandro Mani <manisandro@gmail.com> - 9.0.0-1
 - Update to 9.0.0
-- Manually merge with fedora/rawhide
-  resolves: rhbz#1996703
 
-* Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 8.0.0-4
-- Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
-  Related: rhbz#1991688
-
-* Fri Apr 16 2021 Mohan Boddu <mboddu@redhat.com> - 8.0.0-3
-- Rebuilt for RHEL 9 BETA on Apr 15th 2021. Related: rhbz#1947937
+* Mon May 17 2021 Sandro Mani <manisandro@gmail.com> - 8.0.2-1
+- Update to 8.0.2
 
 * Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 8.0.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
